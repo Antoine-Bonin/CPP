@@ -6,15 +6,14 @@
 /*   By: antbonin <antbonin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:20:11 by antbonin          #+#    #+#             */
-/*   Updated: 2025/10/20 15:50:26 by antbonin         ###   ########.fr       */
+/*   Updated: 2025/10/21 15:53:54 by antbonin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
-#include "ostream"
-using namespace std;
+# include <iostream>
 
 class Fixed
 {

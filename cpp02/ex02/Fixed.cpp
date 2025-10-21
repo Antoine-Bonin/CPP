@@ -6,7 +6,7 @@
 /*   By: antbonin <antbonin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:22:46 by antbonin          #+#    #+#             */
-/*   Updated: 2025/10/20 18:39:40 by antbonin         ###   ########.fr       */
+/*   Updated: 2025/10/21 15:53:58 by antbonin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,13 @@ Fixed::Fixed(): _value(0)
 
 Fixed::Fixed(const int &number)
 {
+    std::cout << "Int constructor called" << std::endl;
     this->_value = number << _bitsValue;
 }
 
 Fixed::Fixed(const float &number)
 {
+    std::cout << "Float constructor called" << std::endl;
     this->_value = (int)roundf(number * 256.0f);
 }
 

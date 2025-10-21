@@ -21,7 +21,7 @@ RESET = \033[0m
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(INC_DIR)/Fixed.hpp
 	@echo "$(GREEN)Linking $(NAME)...$(RESET)"
 	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 	@echo "$(GREEN)Build successful!$(RESET)"
