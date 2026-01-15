@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "*.h": "c",
+        "*.c": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.autocomplete": "default",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/includes",
+        "${workspaceFolder}/libft/includes",
+        "${workspaceFolder}/minilibx-linux"
+    ],
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc"
+}
