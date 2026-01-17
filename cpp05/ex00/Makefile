@@ -8,8 +8,8 @@ INCLUDES	= -I ./include
 SRCDIR		= src
 OBJDIR		= obj
 
-SRCS = $(SRCDIR)/Bureaucrat.cpp \
-		$(SRCDIR)/main.cpp
+SRCS = src/Bureaucrat.cpp \
+		src/main.cpp
 
 OBJS		= $(patsubst $(SRCDIR)/%.cpp, $(OBJDIR)/%.o, $(SRCS))
 

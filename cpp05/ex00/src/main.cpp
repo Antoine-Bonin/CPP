@@ -6,37 +6,51 @@
 /*   By: antbonin <antbonin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 17:36:13 by antbonin          #+#    #+#             */
-/*   Updated: 2026/01/09 11:25:05 by antbonin         ###   ########.fr       */
+/*   Updated: 2026/01/15 16:28:36 by antbonin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-int main()
+int	main(void)
 {
-	try {
-		Bureaucrat oui("oui", 149);
-		oui.incrementGrade();
-		std::cout << oui << std::endl;
-		oui.decrementGrade();
+	try
+	{
+		Bureaucrat tooGood("tooGood", 0);
+		tooGood.incrementGrade();
+		std::cout << tooGood << std::endl;
+		tooGood.decrementGrade();
 	}
-	catch (Bureaucrat::GradeTooLowException& e)
+	catch (Bureaucrat::GradeTooHighException &e)
 	{
 		std::cout << "exception : " << e.what() << std::endl;
 	}
-	catch (Bureaucrat::GradeTooHighException &e) {
-        std::cout << "exception: " << e.what() << std::endl;
-    }
-	try {
+	try
+	{
+		Bureaucrat good("good", 149);
+		good.incrementGrade();
+		std::cout << good << std::endl;
+		good.decrementGrade();
+	}
+	catch (Bureaucrat::GradeTooLowException &e)
+	{
+		std::cout << "exception : " << e.what() << std::endl;
+	}
+	catch (Bureaucrat::GradeTooHighException &e)
+	{
+		std::cout << "exception: " << e.what() << std::endl;
+	}
+	try
+	{
 		Bureaucrat non("non", 151);
 	}
-	catch (Bureaucrat::GradeTooLowException& e)
+	catch (Bureaucrat::GradeTooLowException &e)
 	{
 		std::cout << "exception : " << e.what() << std::endl;
 	}
-	catch (Bureaucrat::GradeTooHighException &e) {
-        std::cout << "exception: " << e.what() << std::endl;
-    }
-	return 0;
+	catch (Bureaucrat::GradeTooHighException &e)
+	{
+		std::cout << "exception: " << e.what() << std::endl;
+	}
+	return (0);
 }
-

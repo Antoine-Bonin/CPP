@@ -1,6 +1,6 @@
 .PHONY: all re clean fclean
 
-NAME		= bureaucrat
+NAME		= Form
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 INCLUDES	= -I ./include
@@ -8,8 +8,9 @@ INCLUDES	= -I ./include
 SRCDIR		= src
 OBJDIR		= obj
 
-SRCS = $(SRCDIR)/Bureaucrat.cpp \
-		$(SRCDIR)/main.cpp
+SRCS = src/Bureaucrat.cpp \
+		src/main.cpp \
+		src/Form.cpp
 
 OBJS		= $(patsubst $(SRCDIR)/%.cpp, $(OBJDIR)/%.o, $(SRCS))
 
